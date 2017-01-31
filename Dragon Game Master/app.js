@@ -54,7 +54,7 @@ function process() {
 
 
 function entranceMsg() {
-    msg = "Dovakiin. So happy you're here. Welcome to Hyrule castle. Some of Queen Daenerys's dragons have gotten loose and are wreaking havoc in the castle. We need your help to subdue the dragons. There are two doors in this room. Would you like to enter the door to the north or the door to the west?<br><br><br><br><center> (Enter 'north' or 'west' and click 'continue')";
+    msg = "Dovakiin. So happy you're here. Welcome to Hyrule castle. Some of Queen Daenerys's dragons have gotten loose and are wreaking havoc in the castle. We need your help to subdue the dragons. There are two doors in this room. Would you like to enter the door to the north or the door to the west? (Enter 'north' or 'west' and click 'continue')";
 
     $("#questQuestions").html(msg);
     setFlagsToFalse();
@@ -76,7 +76,7 @@ function entrance() {
 function westWingMsg() {
     alert("What luck! You've arrived at the armory. You find a sword and a shield and pick them up. Go back to the entrance.");
     alert("The only other door is to the north. Go to the north door.");
-    msg = " You enter the north door and...It's a dragon! Using your sword and shield, you are able to defeat the dragon! Giving a piteous moan, he lowers himself submissively onto the ground and allows the dragon keepers to shackle him back up. Now that he's gone, you notice an exit to the North of the room and another door leading to the east side of the castle. <br><br><br><br><center> Would you like to exit or continue your adventure? enter 'exit' or 'continue'";
+    msg = " You enter the north door and...It's a dragon! Using your sword and shield, you are able to defeat the dragon! Giving a piteous moan, he lowers himself submissively onto the ground and allows the dragon keepers to shackle him back up. Now that he's gone, you notice an exit to the North of the room and another door leading to the east side of the castle. Would you like to exit or continue your adventure? enter 'exit' or 'continue'";
 
     $("#questQuestions").html(msg);
     setFlagsToFalse();
@@ -96,7 +96,7 @@ function westWing() {
 
 function northWingMsg() {
     hasBeenToWest == false;
-    msg = "Ermergerd!! It's a dragon! You need a sword and a shield to subdue the dragon. Would you like to head back to the entrance or stay and fight? <br><br><br><br><center> Enter 'entrance' or 'fight'";
+    msg = "Ermergerd!! It's a dragon! You need a sword and a shield to subdue the dragon. Would you like to head back to the entrance or stay and fight? Enter 'entrance' or 'fight'";
     $("#questQuestions").html(msg);
     setFlagsToFalse();
     isNorth = true;
@@ -117,7 +117,7 @@ function northWing() {
 }
 
 function northEastWingMsg() {
-    msg = "You've entered the Northeast Wing of Hyrule castle. There are three doors here.<br><br><br><br><center>  Would you like to go north, south, or east? (enter 'north', 'south', or 'east')";
+    msg = "You've entered the Northeast Wing of Hyrule castle. There are three doors here. Would you like to go north, south, or east? (enter 'north', 'south', or 'east')";
     $("#questQuestions").html(msg);
     setFlagsToFalse();
     isNorthEast = true;
@@ -163,7 +163,7 @@ function northEastOneMsg() {
 
     }
     else if (hasKey === true) {
-        msg = "You unlocked the door! Inside is another dragon. But...wait...it's just a little baby dragon! Aww, he's cute! Do you want to keep him as a pet?<br><br><br><br><center>  Enter 'yes' to keep him or 'no' to alert the guards of his presence.";
+        msg = "You unlocked the door! Inside is another dragon. But...wait...it's just a little baby dragon! Aww, he's cute! Do you want to keep him as a pet? Enter 'yes' to keep him or 'no' to alert the guards of his presence.";
         $("#questQuestions").html(msg);
         setFlagsToFalse();
         isNorthEastOne = true;
@@ -184,7 +184,7 @@ function northEastOne() {
 
 function southEastMsg() {
     if (hasStaff === false) {
-        msg = "You've found another dragon! Trogdor roars and shakes a big, beefy arm in your general direction! He's much bigger than the first dragon--the sword and shield alone shall not suffice!<br><br><br><br><center> Would you like to try to fight Trogdor? Answer 'yes' or 'no'";
+        msg = "You've found another dragon! Trogdor roars and shakes a big, beefy arm in your general direction! He's much bigger than the first dragon--the sword and shield alone shall not suffice!Would you like to try to fight Trogdor? Answer 'yes' or 'no'";
         $("#questQuestions").html(msg);
         setFlagsToFalse();
         isSouthEast = true;
@@ -222,8 +222,9 @@ function southEast() {
 }
 
 function northEastEastMsg() {
-    msg = "Princess Zelda is waiting for you. 'Oh good!' she exclaims, 'you were able to subdue my cousin's dragons! Dany is so irresponsible sometimes! Please, take this gem as my token of gratitude.' You receive a mysterious beautiful gem. <br> 'Please come back to visit whenever you'd like--I'm sure those unruly dragons will cause more trouble eventually!'<br> You assure Zelda that you will be back and exit out of a door located to the east. <br><br>s<center>You made it! Congratulations, and thanks for playing the game!";
+    msg = "Princess Zelda is waiting for you. 'Oh good!' she exclaims, 'you were able to subdue my cousin's dragons! Dany is so irresponsible sometimes! Please, take this gem as my token of gratitude.' You receive a mysterious beautiful gem. 'Please come back to visit whenever you'd like--I'm sure those unruly dragons will cause more trouble eventually!' You assure Zelda that you will be back and exit out of a door located to the east.";
     $("#questQuestions").html(msg);
+    alert("You made it! Congratulations, and thanks for playing the game!")
 }
 
 function inputLC(input) {
