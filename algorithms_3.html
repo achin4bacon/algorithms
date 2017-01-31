@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var table = []; //creates empty array
+var fib = [];  //creates empty array
+fib[0] = 0; //specifies value at index[0] of fib array
+fib[1] = 1; //specifies value at index[1] of fib array
+for(var i=2; i<=200; i++) { //begins at index[2] to begin pattern
+    fib[i] = fib[i-2] + fib[i-1]; //algorithm for fibinacci
+    var temp = fib[i]; //creates temporary variable to avoid re-typing "fib[i]"
+    if (temp % 2 !== 0) { //modulo to check if number is odd
+        if (temp < 2000000) { //make sure fib[i] (temp) value is less than 2,000,000
+            table.push(temp) //if both "if" statements are true, push results to empty table
+        }
+    }
+}
+console.log(table);
+var sum = 0; //empty variable for sum
+for (var index = 0; index < table.length; index++) {
+    sum = sum + table[index]; //adds up values in table to determine sum
+}
+console.log(sum); //yay! final answer!
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithms 5</title>
+</head>
+
+<body>
+    <script>
+        guessingGame();
+
+        function guessingGame() {
+            var min = 1;
+            var max = 100;
+            var guess = 50;
+
+            var input = prompt("Think of a number between 1 and 100. If the number we guess is too high, type 'h', If the number we guess is too low, type 'l'. If we guess correctly, type 'y'. Type 'q' at any point if you wish to quit the game. Is your number 50?");
+            var inputLC;
+
+            while (input !== "y" && input !== "Y") {
+                inputLC = input.toLowerCase();
+                if (inputLC === "h") {
+                    max = guess;
+                    guess = Math.round((min + max) / 2);
+                }
+                else if (inputLC === "l") {
+                    min = guess;
+                    guess = Math.round((min + max) / 2);
+                }
+                else if (inputLC == "q") {
+                    return;
+                }
+                else {
+                    alert("invalid input. Please select 'h', 'l', 'y', or 'q'.");
+                }
+                input = (prompt("Is your number " + guess + "? If the number we guessed is too high, type 'h', If the number we guessed is too low, type 'l'. If we guessed correctly, type 'y'. Type 'q' at any point if you wish to quit the game. Is your number 50?"));
+            }
+            alert("We found your number! This game's over. Let's play again!");
+            guessingGame();
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //toLowerCase
+    //to UpperCase
+    //slice
+    //indexOf
+    //split
+
+    var a = "Hello World";
+    console.log(a);
+    console.log(a.length);
+    console.log(a.toLowerCase());
+
+    var b = a.toLowerCase();
+    console.log(b); 
+    console.log(b.toUpperCase());
+
+    //slice returns section of string -- substring (USE SLICE - SAME AS ARRAYS)
+    console.log(b.slice(6,11));
+    console.log(a.slice(6, a.length));
+    //substr - (start index, counts length of substr not indexes) 
+    console.log(a.substr(6, 5));
+
+    //index of - locate substring
+    var c = "ifsldkfjsf:sdlkfjd";
+    var middle = c.indexOf(":");
+    console.log(c.slice(middle + 1, c.length));
+    var nextMiddle = c.indexOf(":", middle + 1); //find the next : starting at first :
+    //returns -1 if no result
+
+    //split -- splits into array
+    var d = "Hello world how are you"; //["Hello", "world", "how", "are", "you"]
+    console.log(d.split(" ")); //gets rid of spaces --> new array
+    console.log(d.split("world")); //removes "world", splits ["Hello", "how are you"]
+   
+  console.log(d.split(" ").slice(2, d.split(" ").length));
+
+    var howIndex = d.indexOf("how");
+    var f = [d.slice(0, howIndex), d.slice(howIndex, d.length)];
+    console.log(f);
+    //"hello world", "how are you"
+
+
+
+    </script>
+</body>
+</html>

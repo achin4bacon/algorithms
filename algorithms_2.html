@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var table = [];//creates empty table
+        for (var i = 1; i < 1500; i++) { //sets parameter for 1500
+            if (i % 5 === 0 || i % 3 === 0) {
+                table.push(i); //pushes through to empty table if number is divisible by 5 or 3
+            }
+        }
+
+        var sum = 0; //creates variable for final sum
+        for (var index = 0; index < table.length; index++) {
+            sum = sum + table[index]; //uses table to add total for sum variable
+        }
+        console.log(sum); //yay! print!
+
+
+    </script>
+</body>
+
+</html>

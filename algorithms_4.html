@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithms 4</title>
+</head>
+
+<body>
+    <script>
+        var numArray;
+        var numText = prompt("GiMmE uR dIgItz!!!! **INPUT MUST BE NUMERIC ONLY**"); //program will not work if there are letters
+        if (isNaN(numText)) {
+            console.log("I told you only to enter a number! Refresh the page and try again.");
+        }
+        else {
+            numArray = numText.split("");
+            //split every digit in the input
+
+            for (var i = 0; i < numArray.length; i++) {
+                numArray[i] = parseFloat(numArray[i]);//loop to change every individual string to numbers
+            }
+            var finalString = "";//creates string for final result
+
+
+            for (var i = 0; i < numArray.length; i++) {
+                if (i !== 0) { //for every number after the first number, proceed to next statement [otherwise, move to else]
+                    if (numArray[i] % 2 === 1 && numArray[i - 1] % 2 === 1) { //if number is odd and number before it is odd
+                        finalString += "-" + numArray[i]; //add "-" and number to final string
+                    }
+                    else { //if number is even or an odd number following an even number
+                        finalString += numArray[i]; //add number to final string
+                    }
+                }
+
+                else
+                { finalString += numArray[i] }//the first number does not have a previous number to refer to and will always be the same in the final string 
+
+            }
+             console.log(finalString); //yay! final answer!
+        };
+       
+
+    </script>
+</body>
+
+</html>

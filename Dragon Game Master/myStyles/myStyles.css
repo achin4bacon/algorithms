@@ -1,0 +1,35 @@
+
+
+.container {
+   margin-top: 10px;
+}
+
+
+#dragonStory { 
+border: 1px solid rebeccapurple; 
+width: 800px; 
+height: 500px; 
+background-image: url(https://s-media-cache-ak0.pinimg.com/736x/a0/27/29/a02729a343619e91a052a0f9075332e4.jpg);  
+background-size: cover; 
+
+}
+
+#questQuestions { 
+    border: 20px solid purple;
+    width: 500px;
+    height: 400px;
+    padding-left: 20px;
+    padding-top: 50px;
+    background-color: lightslategrey;
+    margin: 0 auto; 
+    font-size: 18px;
+    opacity: .75;
+}
+
+body {
+background-color: black;
+font-family: fantasy; 
+color: black;
+font-style: bold; 
+font-size: 36; 
+}
